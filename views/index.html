@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iNaturalist API: Observation Examples</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif" rel="stylesheet">
+  </head>
+  <body>
+    <header>BoCo iNaturalist Dashboard</header>
+    
+    <div class="container">
+      <!-- info & options -->
+      <div class="row">
+        <div>
+          <p>
+            An iNaturalist dashboard highlighting the observations for the last two weeks for Boulder County, CO (roughly and without the heights). 
+          </p>
+        </div>
+        <div class="toggle-field">
+          <div class="toggle-title">Observation Taxonomy?</div>
+          <input type="radio" id="toggle_3_left" name="toggle_3" value="Plantae" checked/>
+          <label for="toggle_3_left">Plants</label>
+          <input type="radio" id="toggle_3_center" name="toggle_3" value="Aves" />
+          <label for="toggle_3_center">Birds</label>
+                <input type="radio" id="toggle_3_right" name="toggle_3" value="Mammalia" />
+          <label for="toggle_3_right">Mammals</label>
+          <button id="search" class="btn">Search</button>
+        </div>
+      </div>
+      <!-- display the img cards -->
+      <div class="row results"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" ></script>
+
+    <script src="/client.js"></script>
+  </body>
+</html>
