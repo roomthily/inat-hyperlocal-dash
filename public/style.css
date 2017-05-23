@@ -1,0 +1,136 @@
+body {
+  font-family: 'Noto Serif', serif;
+  margin: 2.5rem 5rem;
+}
+
+header {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+/*   grid-template-rows: 1fr 3fr; */
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-row-gap:10px;
+  grid-column-gap:10px;
+  align-items:center;
+}
+
+.results {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+}
+
+/** for our taxon toggle selector **/
+.toggle-field {
+  padding: 40px;
+  overflow: hidden;
+}
+
+.toggle-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.toggle-field label {
+  font-family: 'Noto Sans', sans-serif;
+  float: left;
+}
+
+.toggle-field label {
+  display: inline-block;
+  width: 60px;
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+
+.toggle-field label:hover {
+    cursor: pointer;
+}
+
+.toggle-field input:checked + label {
+  background-color: #A5DC86;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.toggle-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.toggle-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+.btn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #424242;
+  font-size: 15px;
+  background: #c2c2c2;
+  padding: 7px 20px 7px 20px;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+/** end taxon toggle selector **/
+
+/** results display **/
+.entry {
+  display:grid;
+  grid-template-columns: 20% 70%;
+  grid-column-gap: 2rem;
+  text-align: left;
+  border: 1px solid #375174;
+  padding: 1rem;
+  background-color: #dde5ef;
+}
+
+.entry h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight:bold;
+  font-size:100%;
+  margin:0;
+  padding:0;
+}
+
+.info p {
+  margin-bottom: 0.2rem;
+}
+
+.error {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight:bold;
+}
