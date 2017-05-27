@@ -4,7 +4,7 @@ A quick little viewer to show the species (plants, birds or mammals) seen around
 
 The [dashboard](https://married-soy.glitch.me) shows an example observation from each species observed over that time period: 
 
-![Example observation display](https://cdn.glitch.com/231b6ee2-1a2e-44dd-9761-486cbfcd5042%2Finat_example.png?1495582226719 "Example card")
+![Example observation display](https://cdn.glitch.com/231b6ee2-1a2e-44dd-9761-486cbfcd5042%2Finat_example.png?1495853641190 "Example card")
 
 (limited to the most recent 100 observations).
 
