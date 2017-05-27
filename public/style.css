@@ -121,7 +121,7 @@ header {
   display:grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
-
+  width:25rem;
   max-width: 30rem; 
   font-family: 'Noto Serif';
 }
@@ -130,6 +130,10 @@ h2 {
   font-family: 'Noto Sans';
 }
 
+h2 .fa {
+  font-size: 75%;
+  padding-left: 0.6rem;
+}
 h2 i {
 /*   vertical-align:top; */
   color: #E48F8F;
@@ -165,6 +169,15 @@ p {
   border-bottom: 1px solid #63C476;
 }
 
+.bottom.left {
+  position:relative;
+}
+.total_box {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
 .found, .total {
   font-family: 'Noto Sans';
   text-align: center;
@@ -173,7 +186,7 @@ p {
 }
 
 .found {
-  width: 100%;
+  width: 98%;
   border-top:1px solid #63C476;
   border-right:1px solid #63C476;
   
@@ -184,6 +197,7 @@ p {
   background: #63C476;
   border-bottom-left-radius: 40px;
   border-bottom:1px solid #63C476;
+  visibility:hidden;
 }
 
 .error {
