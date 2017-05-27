@@ -57,7 +57,8 @@ $(function() {
   
   // load the template to display the card
   // this uses the handlebars engine (loaded on index.html)
-  var card_tmpl = Handlebars.compile('{{#each cards}}<div class="entry"><div><img src="{{photo}}" title="{{@key}} aka {{common_name}}" alt="{{credit.attribution}}"/></div><div class="info"><h1>{{common_name}} ({{@key}})</h1><p>Found {{total_observed_for_query}} with {{total_observed}} observations total.</p><p>Observation by: {{credit.name}}</p><p>Credit: {{credit.attribution}}</p><p><a href="{{credit.url}}">View observation</a></p></div></div>{{else}}<div class="error"><p><span>＜(。_。)＞</span> Oh no! We ran into a problem talking to iNaturalist!</p>{{/each}}');
+  // var card_tmpl = Handlebars.compile('{{#each cards}}<div class="entry"><div><img src="{{photo}}" title="{{@key}} aka {{common_name}}" alt="{{credit.attribution}}"/></div><div class="info"><h1>{{common_name}} ({{@key}})</h1><p>Found {{total_observed_for_query}} with {{total_observed}} observations total.</p><p>Observation by: {{credit.name}}</p><p>Credit: {{credit.attribution}}</p><p><a href="{{credit.url}}">View observation</a></p></div></div>{{else}}<div class="error"><p><span>＜(。_。)＞</span> Oh no! We ran into a problem talking to iNaturalist!</p>{{/each}}');
   
+  var card_tmpl = Handlebars.compile('{{#each cards}}<div class="card"><div class="top left"><img src="{{photo}}" title="{{@key}} aka {{common_name}}" alt="{{credit.attribution}}"/></div><div class="top right"><h2>{{common_name}} ({{@key}}) <a href="{{credit.url}}"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></h2></div><div class="bottom left"><div class="found">{{total_observed_for_query}}</div><div class="total">{{total_observed}}</div></div><div class="bottom right"><p>Observation by: {{credit.name}}</p><p>Credit: {{credit.attribution}}</p></div></div>{{else}}<div class="error"><p><span>＜(。_。)＞</span> Oh no! We ran into a problem talking to iNaturalist!</p></div>{{/each}}');
 });
 
